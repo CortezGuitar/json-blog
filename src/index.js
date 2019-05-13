@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './containers/App';
+import JsonService from './services';
+import { JsonServiceProvider } from './services';
+import store from './store/store';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const jsonService = new JsonService();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <JsonServiceProvider value={jsonService}>
+      <Router>
+        <App />
+      </Router>
+    </JsonServiceProvider>
+  </Provider>,
+  document.getElementById('root')
+);

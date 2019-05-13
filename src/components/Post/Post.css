@@ -1,0 +1,9 @@
+.Post {
+  max-width: 16rem;
+}
+
+@media (max-width: 768px) {
+  .Post {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+.PostPage {
+  padding: 1rem;
+  margin: 0;
+}
+
+.PostPage-container {
+  max-width: 90%;
+}
+
+@media(max-width: 576px) {
+  .PostPage-container {
+    max-width: 100%;
+  }
+}
