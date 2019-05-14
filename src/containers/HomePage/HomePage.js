@@ -26,7 +26,7 @@ class HomePage extends Component {
           <div className="text-center mx-auto" style={{ maxWidth: '16rem' }}>
             <Link
               to="/create-post"
-              className="btn btn-block btn-lg btn-primary"
+              className="btn btn-block btn-lg btn-primary disabled"
             >
               Create Post
             </Link>
